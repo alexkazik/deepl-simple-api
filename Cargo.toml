@@ -1,0 +1,19 @@
+[package]
+name = "deepl-simple-api"
+version = "0.1.0"
+description = "Simple DeppL API"
+edition = "2024"
+rust-version = "1.94"
+
+[dependencies]
+paste = "1.0.15"
+reqwest = { version = "0.13.2", features = ["json"] }
+serde = { version = "1.0.228", default-features = false, features = ["derive"] }
+
+[features]
+default = []
+blocking = ["reqwest/blocking"]
+
+[lints.clippy]
+correctness = "deny"
+pedantic = "warn"
